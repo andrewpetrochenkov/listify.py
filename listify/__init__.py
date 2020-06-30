@@ -1,14 +1,14 @@
-#!/usr/bin/env python
+__all__ = ['listify']
+
+
 import functools
 import types
-import public
 
 """
 decorator for making generator functions return a list instead
 """
 
 
-@public.add
 def listify(func):
     """`@listify` decorator"""
     @functools.wraps(func)
